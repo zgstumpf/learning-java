@@ -114,6 +114,155 @@ public class Main {
         System.out.println(5);
 
         // Print results of code to be evaluated
-        System.out.println(5*5);
+        System.out.println(5*5); // Result: 25
+        // Like many programming languages, comments can be placed in-line
+        // after a statement.
+
+
+        // Variables
+
+        // Variables must be assigned a data type.
+        // Data types can be in 1 of 2 groups:
+        //  1. Primitive (no additional methods, cannot be null, start with lowercase letter)
+        //      - byte: 1 byte, integers -128 to 127
+        //      - short: 2 bytes, -32,768 to 32,767
+        //      - int: 4 bytes, -2,147,483,648 to 2,147,483,647
+        //      - long: 8 bytes: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+        //           MUST end in L.
+        //           * Need a bigger integer? Use java.math.BigInteger.
+        //      - float: 4 bytes, decimals up to 7 places. MUST end in f.
+        //      - double: 8 bytes, decimals up to 15 places
+        //           * Never use floats or doubles when exact precision
+        //             is required (ex: currency calculations).
+        //             Use java.math.BigDecimal.
+        //      - boolean: (size may vary), true or false
+        //      - char: 2 bytes, a single character, such as 'A'
+        //      * For numbers, int and double are most commonly used.
+        //      ** Integer numbers without suffix are automatically type int.
+        //         Decimal numbers without suffix are automatically type double.
+        //  2. Non-primitive (reference types, point to objects, can have methods, can be null, start with uppercase letter)
+        //      - String
+        //      - Array
+        //      - Class
+
+        // Syntax to declare a variable:
+        // dataType variableName = value;
+        //    * variableName is also called an identifier
+        String a = "abc"; // String must be surrounded with double quotes
+        int b = 10;
+        boolean c = true;
+        float d = 7.99f; // float must end in f, or Java thinks it is double.
+        long baz = 9223372036854775807L; // long must end in L
+        char e = 'e'; // char must be surrounded with single quotes
+
+
+        // Non-primitive or reference types can be null, meaning
+        // it does not point to any object.
+        String f = null;
+
+        // Now, g points to a String object with value "something".
+        String g = "something";
+
+        // Bonus Info
+        String g2 = "something";
+        // To save space, Java makes g and g2 point to the same
+        // String object, since they have the same value anyway.
+
+        // final keyword makes variable constant, or unchangeable.
+        final int MY_NUM = 15; // all caps with underscores
+        // h = 20; -> error
+
+        // Declare multiple variables of same data type on 1 line
+        int x = 1, y = 2, z = 3;
+
+        // Assign same value to multiple variables of same
+        // datatype at once
+        int i, j, k;
+        i = j = k = 0;
+
+        // Declare variable now, initialize it with value later
+        int foo;
+        foo = 10;
+        // Variable must be eventually initialized with a value, or
+        // there will be an error.
+
+
+        // Casting or converting types
+
+        // Widening casting: done automatically
+        int amount = 20;
+        float amount2 = amount * 1.1f;
+
+        // Narrowing casting: you have to do manually
+        double number = 10.512;
+        int numberAsInt = (int) number;
+
+
+        // Math operators
+        // + Add
+        // - Subtract
+        // * Multiply
+        // / Divide
+        // % Mod (remainder)
+        // ++ Increment by 1
+        // -- Decrement by 1
+        // For exponents, use Math.pow(2, 3) // 2^3 -> 8
+        // For square root, use Math.sqrt(64) -> 8
+
+        // For ints, / does floor division.
+        System.out.println(5 / 2); // 2.5 -> floor -> 2
+
+        // For doubles, / does normal division with decimals.
+        System.out.println(5.0 / 2.0); // 2.5
+
+        // Increment usage
+        int boo = 6;
+        boo++; // same as boo += 1
+        System.out.println(boo); // 7
+
+        // Math operator and assign at same time
+        boo += 3;
+        System.out.println(boo); // 10
+
+        Math.max(1, 3); // 3
+        Math.min(1, 3); // 1
+        Math.abs(-100); // 100
+
+
+        // Boolean comparison
+
+        // == equal to
+        // != not equal to
+        // >  greater than
+        // <  less than
+        // >= greater than or equal to
+        // <= less than or equal to
+
+        // && AND
+        // || OR
+        // !  NOT
+
+
+        // String operations
+        String text = "Hello";
+        text.length(); // 5
+        text.toLowerCase(); // returns "hello" - does not change value
+        text.trim(); // returns String without leading, trailing spaces
+        char result = text.charAt(0); // return char at index 0 -> 'H'
+        char result2 = text.charAt(text.length() - 1); // return char at last index -> 'o'
+        String result3 = text.substring(1, 4); // start, stop -> "ell"
+        String result4 = text.substring(1); // leave out stop index to go from start to end of String -> "ello"
+        String result5 = "abc" + "def"; // "abcdef" // concat
+
+        // Insert variables into strings
+        int var1 = 200;
+        int var2 = 400;
+        System.out.println("Numbers are " + var1 + " and " + var2); // Numbers are 200 and 400
+        // Order matters. First + adds 2 ints, second + adds result int and String, producing String
+        System.out.println(var1 + var2 + " is 600"); // 600 is 600
+        // Some special characters need to be escaped with \
+        System.out.println("Double quote in string: \" ");
+        System.out.println("Backslash in string: \\ ");
+        System.out.println("Line1\nLine2"); // \n is newline
     }
 }
