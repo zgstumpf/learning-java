@@ -264,5 +264,39 @@ public class Main {
         System.out.println("Double quote in string: \" ");
         System.out.println("Backslash in string: \\ ");
         System.out.println("Line1\nLine2"); // \n is newline
+
+
+        // If statements behave as expected.
+        // Conditions are in (), clause bodies are in {}.
+        // Keywords: if, else if, else
+        if (1 > 10) {
+            // ...
+        } else if (5 > 2) {
+            // ...
+        } else {
+            // ...
+        }
+
+        // Ternary if statement
+        // (condition) ? return this if true : return this if false
+        int grade = 80;
+        String message = (grade > 60) ? "You passed." : "You failed.";
+
+        // Switch case
+        // Behaves as expected
+        // Note cases start with a :
+        // If you don't end a case with break, the code will continue checking the next cases.
+        String day = "Sunday";
+        switch (day) {
+            case "Saturday":
+                System.out.println("It's Saturday");
+                break;
+            case "Sunday":
+                System.out.println("It's Sunday");
+                break;
+            default:
+                System.out.println("It's a weekday");
+        }
+        
     }
 }
