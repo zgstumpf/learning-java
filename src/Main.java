@@ -297,6 +297,6 @@ public class Main {
             default:
                 System.out.println("It's a weekday");
         }
-        
+
     }
 }
