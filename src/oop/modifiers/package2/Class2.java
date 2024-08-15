@@ -2,7 +2,8 @@ package oop.modifiers.package2;
 
 // Must be full package path
 // Must specify which class to import (use * to import all classes in the package)
-import oop.modifiers.package1.*;
+import oop.modifiers.package1.Class1;
+// import oop.modifiers.package1.PackageOnly; // Error because PackageOnly is not public.
 
 public class Class2 {
     static String text = "I am Class2";
