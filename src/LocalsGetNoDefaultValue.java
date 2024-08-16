@@ -5,6 +5,5 @@ public class LocalsGetNoDefaultValue {
 //        System.out.println(a);
         // Because only instance variables can not be initialized and get a default value.
         // Local variables must be initialized before use.
-
     }
 }
