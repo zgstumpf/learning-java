@@ -59,5 +59,10 @@ public class Strings {
         String[] words2 = {"combine", "these", "words"};
         String sentence2 = String.join(" ", words2);
         System.out.println(sentence2);
+
+        // loop
+        for (char ch : str.toCharArray()) {
+            System.out.println(ch);
+        }
     }
 }
