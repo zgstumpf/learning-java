@@ -27,5 +27,19 @@ class Array {
         defaultNums[0] = 10;
         System.out.println("\t|\n\tv");
         System.out.println(Arrays.toString(defaultNums));
+
+        // Loop
+        // ----
+        // For each
+        for (int num : nums) {
+            System.out.println(num);
+        }
+        // Regular for
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(nums[i]);
+        }
+
+        // Slicing
+
     }
 }
