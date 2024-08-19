@@ -30,7 +30,7 @@ class Array {
 
         // Loop
         // ----
-        // For each
+        // For each / Enhanced for
         for (int num : nums) {
             System.out.println(num);
         }
@@ -39,7 +39,61 @@ class Array {
             System.out.println(nums[i]);
         }
 
-        // Slicing
+        // Slice
+        int[] nums2 = {4, 1, 6, 7, 1, 5, 7, 8, 3, 1};
+        // Params: original array, from index, to index (exclusive)
+        int[] nums3 = Arrays.copyOfRange(nums2, 1, 4);
+        System.out.println(Arrays.toString(nums3)); // [1, 6, 7]
+        int[] copyNums2 = Arrays.copyOfRange(nums2, 0, nums2.length);
+        System.out.println("nums2 copy: " + Arrays.toString(copyNums2));
 
+        // Is element in array
+        // -------------------
+        // Note: for some reason, there is no built-in java method for this.
+        for (int num : nums2) {
+            if (num == 8) { // == will only work for primitives
+                System.out.println("Found 8");
+            }
+        }
+
+        String[] strings = {"A", "B", "C"};
+        for (String str : strings) {
+            if (str.equals("B")) { // use .equals for strings
+                System.out.println("Found B");
+            }
+        }
+
+        // Sort
+        Arrays.sort(nums2);
+        System.out.println(Arrays.toString(nums2));
+
+        // Find max/min
+        // ------------
+        // You have to implement this yourself too.
+        int max = Integer.MIN_VALUE;
+        for (int num : nums2) {
+            max = Math.max(max, num);
+        }
+        System.out.println("Max of nums2 is " + max);
+
+        int min = Integer.MAX_VALUE;
+        for (int num : nums2) {
+            min = Math.min(min, num);
+        }
+        System.out.println("Min of nums2 is " + min);
+
+        // Exercises
+        // ---------
+        // Sort reverse
+        int[] nums4 = {3, 5, 1, 5, 6, 7, 4};
+        Arrays.sort(nums4);
+        System.out.println(Arrays.toString(nums4));
+        int[] res = new int[nums4.length];
+        int j = nums4.length - 1;
+        for (int num: nums4) {
+            res[j] = num;
+            j--;
+        }
+        System.out.println(Arrays.toString(res));
     }
 }
