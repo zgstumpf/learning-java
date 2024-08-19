@@ -95,5 +95,21 @@ class Array {
             j--;
         }
         System.out.println(Arrays.toString(res));
+
+        // 1. Exercise: Array Rotation
+        // Task: Write a program that rotates an array to the right by a given number of
+        // positions. For example, if the array is [1, 2, 3, 4, 5] and you rotate it by
+        // 2 positions, the result should be [4, 5, 1, 2, 3].
+        // Requirements: Do this in-place without using additional arrays.
+        //
+        //  x - Given start index, find end index - nope, this technique needs additional array
+        //  x - keep track of current and new index (current + num rotations) - nope, same as first idea
+        //  ? - start at first num, find new index ^"", store element at new index in temp, then
+        //      find temp's new index, repeat for all elements until performed array.length switches
+        int[] input = {1, 2, 3, 4, 5};
+        int rotations = 2;
+        // -- Code --
+
+        System.out.println(Arrays.toString(input));
     }
 }
