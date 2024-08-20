@@ -96,20 +96,19 @@ class Array {
         }
         System.out.println(Arrays.toString(res));
 
-        // 1. Exercise: Array Rotation
-        // Task: Write a program that rotates an array to the right by a given number of
-        // positions. For example, if the array is [1, 2, 3, 4, 5] and you rotate it by
-        // 2 positions, the result should be [4, 5, 1, 2, 3].
-        // Requirements: Do this in-place without using additional arrays.
-        //
-        //  x - Given start index, find end index - nope, this technique needs additional array
-        //  x - keep track of current and new index (current + num rotations) - nope, same as first idea
-        //  ? - start at first num, find new index ^"", store element at new index in temp, then
-        //      find temp's new index, repeat for all elements until performed array.length switches
-        int[] input = {1, 2, 3, 4, 5};
-        int rotations = 2;
-        // -- Code --
+        // Experiment with array referencing
+        int[] numsTest = {1, 1};
+        int[] numsTest2 = {1};
+        // == works as expected for primitives - values are compared.
+        System.out.println(numsTest[0] == numsTest[1]); // true
+        System.out.println(numsTest2[0] == numsTest[0]); // true
 
-        System.out.println(Arrays.toString(input));
+        // For objects, including strings, == checks if memory locations are identical.
+        // However, for strings, the string pool is used, so all string literals point to the
+        // same string object in memory.
+        String[] letters = {"A", "A"};
+        String[] letters2 = {"A"};
+        System.out.println(letters[0] == letters[1]); // true
+        System.out.println(letters2[0] == letters[0]); // true
     }
 }
