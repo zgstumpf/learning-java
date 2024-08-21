@@ -64,5 +64,11 @@ public class Strings {
         for (char ch : str.toCharArray()) {
             System.out.println(ch);
         }
+
+        // Empty string
+        String empty = "";
+        System.out.println(empty.length()); // 0
+        System.out.println(empty.equals("")); // true
+        System.out.println(empty == null); // false
     }
 }
