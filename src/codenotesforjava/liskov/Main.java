@@ -20,5 +20,8 @@ class Main {
         Car convertible1 = new Convertible(); // Subclass used in place of its superclass.
         // But not this?
         // Convertible convertible2  = new Car(); // Error - superclass used in place of its subclass.
+
+        // convertible1.activateRoof() // Error - Because convertible1 is actually type Car, it
+        // does not have the activateRoof method.
     }
 }
