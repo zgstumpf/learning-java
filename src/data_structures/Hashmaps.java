@@ -33,5 +33,20 @@ public class Hashmaps {
         // Remove key-value pair
         map.remove("a");
         System.out.println(map);
+
+        // Iterate through entries
+        for (java.util.Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+        // Iterate through keys
+        for (String key : map.keySet()) {
+            // ...
+        }
+
+        // Iterate through values
+        for (int value : map.values()) {
+            // ...
+        }
     }
 }
