@@ -58,6 +58,14 @@ public class ArrayLists {
         // Max, min
         System.out.println(Collections.max(nums3));
         System.out.println(Collections.min(nums3));
+
+        // ArrayList can hold multiple different data types.
+        ArrayList<Object> arr = new ArrayList<Object>();
+        arr.add("String");
+        arr.add(1);
+        for (Object i : arr) {
+            System.out.println(i);
+        }
     }
 
 }
