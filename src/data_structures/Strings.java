@@ -70,5 +70,6 @@ public class Strings {
         System.out.println(empty.length()); // 0
         System.out.println(empty.equals("")); // true
         System.out.println(empty == null); // false
+
     }
 }
