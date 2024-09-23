@@ -17,6 +17,6 @@ public class Problem15 {
             set.add(num);
         }
         int maxLength = 0;
-        
+
     }
 }
